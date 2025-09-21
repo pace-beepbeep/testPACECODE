@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn-animated {
+    @apply relative overflow-hidden border-2 border-purple-600 text-purple-600 font-medium px-6 py-2 rounded-lg;
+  }
+  .btn-animated > span {
+    @apply relative z-10 transition-colors duration-300 group-hover:text-white;
+  }
+  .btn-animated::before {
+    content: "";
+    @apply absolute w-0 h-0 bg-purple-600 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 transition-all duration-500;
+  }
+  .btn-animated:hover::before {
+    @apply w-[300%] h-[300%];
+  }
+}
+
+@layer components {
+  .btn-animated {
+    @apply relative overflow-hidden font-medium px-6 py-2 rounded-lg border-2;
+  }
+
+  /* varian putih → hover ungu */
+  .btn-white {
+    @apply bg-white border-purple-600 text-purple-600;
+  }
+  .btn-white > span {
+    @apply relative z-10 transition-colors duration-300 group-hover:text-white;
+  }
+  .btn-white::before {
+    content: "";
+    @apply absolute w-0 h-0 bg-purple-600 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 transition-all duration-500;
+  }
+  .btn-white:hover::before {
+    @apply w-[300%] h-[300%];
+  }
+}
+
+
+
