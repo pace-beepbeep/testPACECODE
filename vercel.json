@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/jurusan", "destination": "/jurusan.html" },
-    { "source": "/profil", "destination": "/profil.html" }
+    { "source": "/jurusan", "destination": "/dist/jurusan.html" },
+    { "source": "/profil", "destination": "/dist/profil.html" }
   ]
 }
